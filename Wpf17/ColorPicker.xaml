@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="300">
     <Viewbox>
-        <Grid Width="300" Height="150" Background="#FFB9ABAB">
+        <Grid Width="300" Height="150" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -30,10 +30,9 @@
                     Value="{Binding Path=Blue, RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type UserControl}}}" Background="#FF156CD4">
             </Slider>
 
-            <Rectangle Grid.Column="1" Grid.RowSpan="3" VerticalAlignment="Center" Width="100" Height="130" Stroke="Black" StrokeThickness="1">
+            <Rectangle Grid.Column="1" Grid.RowSpan="3" VerticalAlignment="Center" Width="100" Height="130" Stroke="Black" StrokeThickness="1" x:Name="solid">
                 <Rectangle.Fill>
-                    <SolidColorBrush Color="{Binding Path=Color,
-                       RelativeSource={RelativeSource TemplatedParent}}"></SolidColorBrush>
+                    <SolidColorBrush Color="{Binding ElementName=colorPicker,Path=Color}"></SolidColorBrush>
                 </Rectangle.Fill>
             </Rectangle>
 
