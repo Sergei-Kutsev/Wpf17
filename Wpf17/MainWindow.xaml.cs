@@ -20,11 +20,11 @@ namespace Wpf17
     /// </summary>
     public partial class MainWindow : Window
     {
+        double txb;
 
-
-        private void colorPicker_ColorChanged(object sender, RoutedPropertyChangedEventArgs e)
+        private void colorPicker_ColorChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            txb.Text = e.NewValue.ToString();
+            color.Text = e.NewValue.ToString();
         }
 
         public MainWindow()
